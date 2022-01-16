@@ -1,5 +1,10 @@
-% ./printcl aaa bb c
-0: ./printcl
-1: aaa
-2: bb
-3: c
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+	int tracker;
+	for(tracker=0; tracker<argc; tracker++)
+		printf("argv[%2d]: %s\n",tracker,argv[tracker]);
+	
+	return 0;
+}
