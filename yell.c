@@ -16,11 +16,13 @@ int main(int argc, char *argv[]){
         int counter = read(fd, line, sizeof line);
         
         while(counter>0){
+            for (int j= 0;j<line;j++){
+                line[j]=toupper(line[j]);
+            }
             write(1,line,counter);
             counter = read(fd,line,sizeof line);
-            putchar (toupper(argc));
-    close(fd);
         }
+    close(fd);
     }
 
     return 0;
